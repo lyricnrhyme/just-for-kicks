@@ -70,6 +70,7 @@ plus.addEventListener("click", increase);
 
 function increase() {
     price4.innerHTML = parseFloat(price4.innerHTML) + 1;
+    //Number(price) 
     price4.appendChild(plus);
 }
 
@@ -85,7 +86,24 @@ function decrease() {
 }
 
 //7. Add an event to the Air Jordan XI shoe that will show another colorway for that shoe after hovering over the image. 
+var colorImage = document.createElement("IMG");
+colorImage.setAttribute("src", "http://thesneakerauthority.com/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/6/8/689479-405.jpg");
+colorImage.setAttribute("alt", "Try Blue!");
+var airJordan11 = document.getElementsByTagName("img")[6];
+// var originalImage = document.createElement("IMG");
+// originalImage.src = airJordan11.src;
+airJordan11.addEventListener("mouseover", showColor);
+colorImage.addEventListener("mouseout", normalColor)
+var airJordan11Div = document.getElementsByClassName("block3 col-sm-4")[1];
 
+function showColor() {
+    airJordan11Div.replaceChild(colorImage, airJordan11);    
+}
+
+function normalColor() {
+    // var otherColor = document.getElementsByTagName("img")[6];
+    airJordan11Div.replaceChild(airJordan11, colorImage);
+}
 
 //8. Add an event to the Air Jordan XII shoe that will increase the image by 50% after clicking on the image.
 
