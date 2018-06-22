@@ -50,6 +50,7 @@ for (var i=0; i<thumbs.length; i++) {
     thumbs[i].addEventListener("click", likeCount);
     var count = document.createElement("div");
     count.className = "count";
+    count.style.display = "inline-block";
     thumbs[i].appendChild(count);
 }
 
@@ -90,8 +91,6 @@ var colorImage = document.createElement("IMG");
 colorImage.setAttribute("src", "http://thesneakerauthority.com/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/6/8/689479-405.jpg");
 colorImage.setAttribute("alt", "Try Blue!");
 var airJordan11 = document.getElementsByTagName("img")[6];
-// var originalImage = document.createElement("IMG");
-// originalImage.src = airJordan11.src;
 airJordan11.addEventListener("mouseover", showColor);
 colorImage.addEventListener("mouseout", normalColor)
 var airJordan11Div = document.getElementsByClassName("block3 col-sm-4")[1];
@@ -101,12 +100,20 @@ function showColor() {
 }
 
 function normalColor() {
-    // var otherColor = document.getElementsByTagName("img")[6];
     airJordan11Div.replaceChild(airJordan11, colorImage);
 }
 
 //8. Add an event to the Air Jordan XII shoe that will increase the image by 50% after clicking on the image.
+var airJordan12 = document.getElementsByTagName("img")[7];
+airJordan12.addEventListener("click", bigger);
+
+function bigger() {
+    airJordan12.style.width = "150%";
+    airJordan12.style.height = "150%"; 
+}
 
 //9. Add events to both the plus and minus icon that will add or decrease the price each time the respective icon is clicked on.
+
+
 
 //10. Add an event to the Air Jordan XXVIII shoe that will show the famous 'crying Michael Jordan' meme after clicking on the image.
