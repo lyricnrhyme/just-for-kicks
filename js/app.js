@@ -134,3 +134,9 @@ function minusOne() {
 }
 
 //10. Add an event to the Air Jordan XXVIII shoe that will show the famous 'crying Michael Jordan' meme after clicking on the image.
+var airJordan18 = document.getElementsByTagName("img")[9];
+airJordan18.addEventListener("click", crey);
+
+function crey() {
+    airJordan18.src = "https://images.solecollector.com/complex/image/upload/k0cpmenk1k6frufwaunf.jpg"
+}
